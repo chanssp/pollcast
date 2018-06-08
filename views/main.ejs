@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>Welcome to PollCast</title>
+</head>
+
+<body>
+    <div id="wrapper">
+    <div class="title-bar">
+        <a href="/" class="mainlogo">P O L L C A S T</a>
+    </div>
+    <h2 id="krText" style="text-align: center;">7대 지방선거 예측</h2>
+    <div id="chart" ></div>
+    <div id="legends">
+        <h5 id="krText">지도 범례</h5>
+        <div id="table2">
+                <div class="row">
+                    <span class="cell col4">
+                        <svg width="11" height="11">
+                            <rect width= "10" height="10" style="fill:#198CD4" />
+                        </svg>
+                    </span>
+                    <span id="krText" class="cell col3">더불어민주당</span>
+                </div>
+                <div class="row">
+                    <span class="cell col4">
+                        <svg width="11" height="11">
+                            <rect width= "10" height="10" style="fill:#e85a71" />
+                        </svg>
+                    </span>
+                    <span id="krText" class="cell col3">자유한국당</span>
+                </div>
+                <div class="row">
+                    <span class="cell col4">
+                        <svg width="11" height="11">
+                            <rect width= "10" height="10" style="fill:#96969B" />
+                        </svg>
+                    </span>
+                    <span id="krText" class="cell col3">무소속</span>
+                </div>
+            </div>
+            <h5 id="engText" class="updated">updated on 2018.6.08</h5>
+    </div>
+    <div id="movingBox" class="movingBox"></div>
+
+    <br>
+
+    <div class="page-content main">
+        <p id="krText">위 지도는 각 광역자치단체에서 유리한 정당의 색깔을 나타냅니다. 각 색깔이 어떤 정당을 나타내는지는 위 범례를 참고하시기 바랍니다.</p>
+        <br>
+        <h2 id="krText" style="color: #188DD3">정당별 광역단체 예상 승리 수</h2>
+        <p id="krText">가장 가능성이 높은 결과는 자유한국당이 2개의 광역자치단체에서, 더불어민주당은 14개의 광역자지단체에서 승리하는 것입니다. 그러나 가장 가능성이 높다고 해서 더불어민주당이 14개의 광역자치단체를 이기는 것이 확실한 것은 아니며, 16개를 이기거나 13개를 이길 가능성도 존재하므로 아래 그래프를 해석할 때 유의하시기 바랍니다.</p>
+        <div class="images">
+            <img src="/result_graph.png" width="700px">
+        </div>
+        <br>
+
+        <h2 id="krText" style="color: #188DD3">광역단체선거 결과별 확률</h2>
+        <p id="krText">가장 위의 선거 결과는 저희 모델상 가장 가능성이 높은 결과이지만, 선거의 결과가 위 지도와 정확히 일치할 확률은 저희 모델상 50%가 채 안됩니다. 저희 시뮬레이션 상 가장 가능성이 높은 결과 다섯개와 각각의 확률을 모아보았습니다. </p>
+        <div class="images">
+            <img src="/comparison.png" width="700px">
+        </div>
+        <br>
+        
+        <h2 id="krText" style="color: #188DD3">가능성 낮은 결과에 대한 확률 분석</h2>
+        <p id="krText">아래는 흥미로운 결과에 대한 저희의 확률 분석입니다.
+        <br>
+        - 민주당이 17개의 지방자치단체를 모두 이길 확률: 0.9%
+        <br>
+        - 민주당이 현재 광역자치단체 수보다 적게 이길 확률: < 0.01% 
+        <br>
+        - 자유한국당이 0개의 지방자치단체를 이길 확률: 5.0% 
+        <br>
+        - 자유한국당이 6개 이상의 지방자치단체를 이길 확률 
+        <a target="_blank" href="http://www.yonhapnews.co.kr/bulletin/2017/09/29/0200000000AKR20170929185600001.HTML">(#)</a>: < 0.01%
+        </p>
+    </div>
+    <footer>
+        <div class="bottom-links">
+            <a href="/about" class="addPages"><p>About</p></a>
+            <a href="/developers" class="addPages"><p>Developers</p></a>
+        </div>
+    </footer>
+    </div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+
+</html>

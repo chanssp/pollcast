@@ -1,0 +1,30 @@
+#chart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+svg .province {
+    stroke: #ddd;
+}
+
+svg .province.c11 { fill: #188DD3; opacity: 1; }
+svg .province.c31 { fill: #188DD3; opacity: 1; }
+svg .province.c32 { fill: #188DD3; opacity: 1; }
+svg .province.c33 { fill: #188DD3; opacity: 1; }
+svg .province.c34 { fill: #188DD3; opacity: 1; }
+svg .province.c29 { fill: #188DD3; opacity: 1; }
+svg .province.c37 { fill: #e85a71; opacity: 1; }
+svg .province.c35 { fill: #188DD3; opacity: 1; }
+svg .province.c22 { fill: #e85a71; opacity: 1; }
+svg .province.c23 { fill: #188DD3; opacity: 1; }
+svg .province.c38 { fill: #188DD3; opacity: 1; }
+svg .province.c36 { fill: #188DD3; opacity: 1; }
+svg .province.c24 { fill: #188DD3; opacity: 1; }
+svg .province.c25 { fill: #188DD3; opacity: 1; }
+svg .province.c26 { fill: #188DD3; opacity: 1; }
+svg .province.c21 { fill: #188DD3; opacity: 1; }
+svg .province.c39 { fill: #96969B; opacity: 1; }
+svg .province:hover { 
+	opacity: 0.7;
+}
+

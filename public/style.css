@@ -1,0 +1,149 @@
+html, body {
+	background-color: #d8e9ef;
+	margin: 0px 0px 0px 0px;
+	height: 100%;
+}
+
+#wrapper {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: -50px; /* footer height */
+}
+
+/*-------nav-bar setting-------*/
+.title-bar {
+	background-color: #454552;
+	height: 36px;
+	padding: 7px 0px 13px 0px;
+}
+
+.mainlogo {
+	height: 36;
+	font-size: 30px;
+	margin: 0px 0px 0px 30px;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	color: #e7e7e7;
+}
+/*-----------------------------*/
+/*-------legend setting--------*/
+#legends {
+	width: 200px;
+	height: 200px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	position: absolute;
+	left: 70%; 
+	top: 300px;
+	text-align: center;
+	opacity: 0.7;
+}
+
+.updated {
+	margin-top: 5px;
+}
+/*-----------------------------*/
+/*------container setting------*/
+.page-content {
+	width: 70%;
+	min-height: 100%;
+	margin: auto;
+	margin-top: 30px;
+	padding-bottom: 70px;
+	justify-content: space-around;
+	line-height: 1.8;
+}
+.main {
+	border-top: solid;
+	border-width: 1px;
+	padding-top: 10px;
+}
+.developers {
+	text-align: center;
+}
+
+.images {
+	text-align: center;
+}
+/*-----------------------------*/
+/*---------box setting---------*/
+.movingBox {
+	width: 240px;
+	height: 250px;
+	position: fixed;
+	display: none;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #ffffff;
+	opacity: 0.7;
+}
+.municip {
+	margin: 20px 0px 10px 0px;
+}
+.incumbent {
+	padding: 5px 0px 15px 0px;
+	margin: 0px 0px 0px 0px;
+}
+#krText { font-family: 'Nanum Gothic', sans-serif; }
+#engText { font-family: 'Open Sans', sans-serif; }
+/*-----------------------------*/
+/*--------table setting--------*/
+#table {
+	display: table; 
+	width: 220px;
+	margin: auto;
+} #table2 {
+	display: table; 
+	width: 180px;
+	margin: auto;
+}
+.row {
+	display: table-row;
+	text-align: center;
+}
+.cell {
+	display: table-cell; 
+	padding: 3px; 
+	height: 21px;
+}
+.col1 {width: 25%;}
+.col2 {
+	width: 25%;
+	font-family: 'Roboto Mono', monospace;
+}
+.col3 {
+	width: 50%;
+	text-align: left;
+}
+.col4 {
+	width: 20%; 
+	text-align: center;
+}
+/*-----------------------------*/
+/*-------footer setting--------*/
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: black;
+	width: 30%;
+	height: 50px;
+	margin: auto;
+	border-top: solid;
+	border-width: 1px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.bottom-links {
+	display: flex;
+	justify-content: space-around;
+	color: #e7e7e7; 
+}
+
+.addPages {
+	text-decoration: none;
+	color: black;
+}
+/*-----------------------------*/

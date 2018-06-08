@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+	<title>About PollCast</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+	<div id="wrapper">
+	<div class="title-bar">
+		<a href="/" class="mainlogo"> P O L L C A S T </a>
+	</div>
+
+	<div class="page-content">
+		<h2 id="krText" style="color: #188DD3">PollCast는 뭘 하는 건가요?</h2>
+		<p id="krText">PollCast는 지역별 여론조사와 지역의 기존 정치 성향을 이용해 선거의 결과를 후보별 승리 확률을 제시함으로써 예측하는 프로그램입니다. 기존 선거 예측은 정량적인 근거를 충분히 제시하지 않았기 때문에, PollCast는 이런 정치 예측의 맹점을 해소하고자 개발하였습니다. 또한 시중의 많은 여론조사 데이터를 보통의 유권자가 모두 읽기는 어려우므로, 여론조사를 모아 승리 확률을 계산하여 유권자들이 여론조사가 시사하는 판세를 쉽게 볼 수 있도록 인터넷에 예측 내용을 공개하고 있습니다. </p>
+		<br>
+		<h2 id="krText" style="color: #188DD3">PollCast가 왜 필요한건가요?</h2>
+		<p id="krText">기존 정치 예측은 틀리는 경우가 많았습니다. 이는 지금까지의 선거 결과 예측이 데이터와 통계가 시사해주는 바를 진지하게 고민하기보다는 소위 “감”에 의존했기 때문입니다. 저희는 역사적으로 여론조사를 모아 오차를 분석한 결과, 오차가 실제로 제시되는 오차범위보다 컸음을 알아냈고, 따라서 승리 확률을 계산함에 있어 현재 여론조사에서 지고 있는 후보가 역전하는 경우가 오차범위가 말해주는 경우보다 더 많습니다. 아래는 저희가 모은 여론조사의 오차 분포입니다.</p>
+		<div class="images">
+			<img src="/about.png" width="400px">
+		</div>
+		<p id="krText">보시다시피 대부분의 여론조사의 오차는 ±3.1%p가 아니라 ±20%p에 걸쳐있어, 여론조사의 오차가 상당함을 알 수 있습니다. 따라서 각 후보의 승리 확률을 계산할 때는 여론조사가 많이 틀릴 수 있다는 점을 고려해야 합니다.
+		<br>
+		한편, 지리적으로 가까운 지역에서는 오차가 비슷한 방향으로 날 가능성이 높습니다. 가령 대구에서 B 정당의 후보가 여론조사보다 3%p 잘 했다면, 경북에서도 B 정당의 후보가 여론조사보다 좋은 선거 결과를 얻을 가능성이 높습니다. 이런 지역별 연관을 적절히 모델링해야 각 정당이 몇 개의 광역자치단체를 이길지를 정확히 예측할 수 있습니다. </p>
+		<br>
+		<h2 id="krText" style="color: #188DD3">PollCast는 어떻게 예측을 하나요?</h2>
+		<p id="krText">PollCast는 먼저 여론조사를 모아 평균을 내되, 더 정확한 여론조사에 가중치를 더 많이 둡니다. 선거가 끝나기 전에 어떤 여론조사가 더 정확한지 평가가 가능하냐는 의문을 가질 수 있습니다. 저희는 여론조사기관마다 다른 정확도를 가질 것이라고 생각하고, 한국갤럽조사연구소, 리얼미터와 같은 기관들의 여론조사 정확도를 평가합니다. 구체적으로, 저희는 뉴스타파 김강민 기자님의 도움으로 모은 2014-2017년 사이의 여론조사를 이용해 여론조사기관의 정확도를 평가하여 역사적으로 더 정확했던 여론조사기관의 조사에 가중치를 많이 둡니다. 
+		<br>
+		다음으로 지역별 정치성향을 분석합니다. 지역별 정치성향은 2012년부터 2017년 사이의 선거에서 지역의 투표 패턴을 평균내되, 최근 선거 결과에 가중치를 많이 둡니다. 이번 7대 지방선거에서는 2017년에 있었던 19대 대선에 가중치를 많이 두는데, 정당별 지지율이 그 때와 비슷하다는 점에서 합리적인 값이라고 말할 수 있습니다.
+		<br>
+		이렇게 여론조사의 평균을 내고 지역별 정치성향을 얻고 나면 비로소 시뮬레이션을 통해서 각 후보의 승률을 계산합니다. 예를 들어 후보 A, B가 있는데 후보 A가 여론조사의 가중평균에서 5%p유리하다고 합시다. 그런데 한국의 여론조사는 평균적으로 10%p 의 오차가 발생합니다. 다시말해 오히려 후보 B가 5%p로 이겨도 이상할 점은 없다는 것입니다. 이런 여론조사의 실제 정확성을 승리확률에 담아내기 위해 저희는 합리적 오차를 시뮬레이션에 넣어, 시뮬레이션별로 각 후보가 몇 번 이기는지를 따져 승리 확률을 계산합니다.</p>
+		<br>
+		<h2 id="krText" style="color: #188DD3">PollCast는 언제 업데이트 되나요?</h2>
+		<p id="krText">PollCast는 매일 밤 새로운 여론조사를 모아 승리 확률을 계산하고, 다음날 18시 이전까지 여론조사를 반영한 정보 업데이트를 완료합니다.</p>
+		<br>
+		<h2 id="krText" style="color: #188DD3">PollCast는 얼마나 정확한가요?</h2>
+		<p id="krText">PollCast프로그램은 지난 6대 지방선거에서 76%의 정확도를 보였습니다. 한편, 구글 트렌드를 통해 각 후보의 검색량을 예측으로 삼아 검색량이 많은 후보가 당선될 것이라고 예상하는 빅 데이터 분석 방법은 67%의 정확도를 보였습니다.</p>
+	</div>
+
+	<footer>
+        <div class="bottom-links">
+            <a href="/about" class="addPages"><p>About</p></a>
+            <a href="/developers" class="addPages"><p>Developers</p></a>
+        </div>
+    </footer>
+	</div>
+</body>	
+
+</html>
